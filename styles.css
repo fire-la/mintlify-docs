@@ -8,3 +8,12 @@ html, html *, body, body * {
 body {
   background-color: #fafafa !important;
 }
+
+/* Hide "Powered by Mintlify" */
+[class*="powered"], [class*="Powered"], [class*="mintlify"], a[href*="mintlify"] {
+  display: none !important;
+}
+
+footer a:last-child, [class*="footer"] a:last-child {
+  display: none !important;
+}
