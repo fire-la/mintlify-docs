@@ -17,7 +17,7 @@
     "description": "Open source, self-hosted financial data management with Beancount. Your financial data. Your control.",
     "keywords": ["beancount", "financial data", "self-hosted", "open source", "accounting", "plain text accounting"]
   },
-  "analytics": {
+  "integrations": {
     "ga4": {
       "measurementId": "G-CXFSVV7DHE"
     }
