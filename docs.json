@@ -9,6 +9,9 @@
   },
   "favicon": "/favicon.svg",
   "styles": "/styles.css",
+  "contextual": {
+    "options": []
+  },
   "navigation": {
     "tabs": [
       {
