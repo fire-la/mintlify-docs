@@ -8,6 +8,7 @@
   --text-muted: #666;
   --text-light: #999;
   --border-color: #e5e5e5;
+  --content-width: 720px;
 }
 
 /* Base styles */
@@ -19,10 +20,27 @@ html, body {
   font-size: 14px !important;
 }
 
-/* Main content area */
+/* Main content area - increase width */
 main, article, .prose, [class*="content"], [class*="Content"], [class*="main"], [class*="Main"] {
   background-color: var(--background) !important;
   color: var(--text-muted) !important;
+  max-width: var(--content-width) !important;
+}
+
+/* Prose content width */
+.prose, [class*="prose"], [class*="Prose"] {
+  max-width: var(--content-width) !important;
+}
+
+/* Article content */
+article, [class*="article"], [class*="Article"] {
+  max-width: var(--content-width) !important;
+  width: 100% !important;
+}
+
+/* Main content container */
+[class*="content-wrapper"], [class*="ContentWrapper"], [class*="docs-content"], [class*="DocsContent"] {
+  max-width: var(--content-width) !important;
 }
 
 /* Sidebar and navigation */
@@ -62,6 +80,13 @@ code, pre, [class*="code"], [class*="Code"] {
   font-size: 13px !important;
 }
 
+/* Inline code */
+code:not(pre code) {
+  background-color: #f0f0f0 !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+}
+
 /* Borders and dividers */
 hr, .border, [class*="border"], [class*="Border"] {
   border-color: var(--border-color) !important;
@@ -95,7 +120,7 @@ footer, [class*="Footer"], [class*="footer"] {
 }
 
 /* Remove default Mintlify backgrounds */
-[class*="gradient"], [class*="Gradient"], [class*="bg-"] {
+[class*="gradient"], [class*="Gradient"] {
   background: none !important;
   background-color: var(--background) !important;
 }
