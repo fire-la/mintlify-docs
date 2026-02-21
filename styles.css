@@ -1,18 +1,10 @@
 /* FIREla Custom Styles - Minimal overrides */
 
-:root {
-  --primary: #FF7F3F;
-  --background: #fafafa;
-  --text-muted: #666;
+/* Base font family and background */
+html, html *, body, body * {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Fira Mono', 'Droid Sans Mono', 'Source Code Pro', monospace !important;
 }
 
-/* Base font family only */
 body {
-  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Fira Mono', 'Droid Sans Mono', 'Source Code Pro', monospace !important;
-  background-color: var(--background) !important;
-}
-
-/* Code blocks font */
-code, pre {
-  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Fira Mono', 'Droid Sans Mono', 'Source Code Pro', monospace !important;
+  background-color: #fafafa !important;
 }
