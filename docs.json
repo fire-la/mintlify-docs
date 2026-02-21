@@ -12,6 +12,11 @@
   "contextual": {
     "options": []
   },
+  "seo": {
+    "title": "firela docs - Open Source Financial Data Management",
+    "description": "Open source, self-hosted financial data management with Beancount. Your financial data. Your control.",
+    "keywords": ["beancount", "financial data", "self-hosted", "open source", "accounting", "plain text accounting"]
+  },
   "navigation": {
     "tabs": [
       {
