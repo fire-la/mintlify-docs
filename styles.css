@@ -1,5 +1,10 @@
 /* FIREla Custom Styles */
 
+/* Base font smaller */
+html {
+  font-size: 14px !important;
+}
+
 /* Force apply to everything */
 *:not(style):not(script) {
   font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace !important;
