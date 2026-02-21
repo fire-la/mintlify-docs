@@ -9,6 +9,7 @@
     "background": "#fafafa"
   },
   "favicon": "/favicon.svg",
+  "styles": "/styles.css",
   "navigation": {
     "tabs": [
       {
