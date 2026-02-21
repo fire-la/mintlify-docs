@@ -1,42 +1,45 @@
-/* FIREla Custom Styles - Minimal overrides */
+/* FIREla Custom Styles */
 
-/* Base font family and background */
-html, html *, body, body * {
-  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Fira Mono', 'Droid Sans Mono', 'Source Code Pro', monospace !important;
+/* Force apply to everything */
+*:not(style):not(script) {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace !important;
 }
 
 body {
   background-color: #fafafa !important;
 }
 
-/* Headings - lighter gray, smaller, more spacing */
-h1, h2, h3, h4, h5, h6, [class*="heading"], [class*="Heading"] {
+/* Headings with higher specificity */
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6,
+article h1, article h2, article h3, article h4, article h5, article h6,
+main h1, main h2, main h3, main h4, main h5, main h6,
+h1, h2, h3, h4, h5, h6 {
   color: #666 !important;
   font-weight: 500 !important;
 }
 
-h1 {
+.prose h1, article h1, main h1, h1 {
   font-size: 1.5rem !important;
   margin-bottom: 1.5rem !important;
+  line-height: 1.4 !important;
 }
 
-h2 {
+.prose h2, article h2, main h2, h2 {
   font-size: 1.25rem !important;
   margin-top: 2rem !important;
   margin-bottom: 1rem !important;
+  line-height: 1.4 !important;
 }
 
-h3 {
+.prose h3, article h3, main h3, h3 {
   font-size: 1rem !important;
   margin-top: 1.5rem !important;
   margin-bottom: 0.75rem !important;
+  line-height: 1.4 !important;
 }
 
-/* Hide "Powered by Mintlify" */
-[class*="powered"], [class*="Powered"], a[href*="mintlify"] {
-  display: none !important;
-}
-
-footer a:last-child, [class*="footer"] a:last-child {
+/* Hide Powered by Mintlify */
+footer a[href*="mintlify"],
+[class*="powered"], [class*="Powered"] {
   display: none !important;
 }
