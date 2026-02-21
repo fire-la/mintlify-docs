@@ -14,27 +14,27 @@ body {
 article h1, article h2, article h3, article h4, article h5, article h6,
 main h1, main h2, main h3, main h4, main h5, main h6,
 h1, h2, h3, h4, h5, h6 {
-  color: #333 !important;
+  color: #BBB !important;
   font-weight: 500 !important;
 }
 
 .prose h1, article h1, main h1, h1 {
   font-size: 1.5rem !important;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 2.5rem !important;
   line-height: 1.4 !important;
 }
 
 .prose h2, article h2, main h2, h2 {
   font-size: 1.25rem !important;
   margin-top: 2rem !important;
-  margin-bottom: 1rem !important;
+  margin-bottom: 2.5rem !important;
   line-height: 1.4 !important;
 }
 
 .prose h3, article h3, main h3, h3 {
   font-size: 1rem !important;
   margin-top: 1.5rem !important;
-  margin-bottom: 0.75rem !important;
+  margin-bottom: 2.5rem !important;
   line-height: 1.4 !important;
 }
 
