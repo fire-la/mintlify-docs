@@ -1,0 +1,76 @@
+---
+title: Installation
+description: Detailed installation guide for FIREla
+---
+
+# Installation
+
+This guide covers different ways to install and run FIREla.
+
+## Option 1: Docker (Recommended)
+
+The easiest way to run FIREla is with Docker.
+
+```bash
+# Clone the repository
+git clone https://github.com/fire-la/firela
+cd firela
+
+# Start with Docker Compose
+docker-compose up -d
+```
+
+### Requirements
+
+- Docker 20.10+
+- Docker Compose 2.0+
+- 2GB RAM minimum
+- 10GB disk space
+
+## Option 2: From Source
+
+For developers who want to contribute or customize.
+
+```bash
+# Clone the repository
+git clone https://github.com/fire-la/firela
+cd firela
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+### Requirements
+
+- Node.js 18+
+- PostgreSQL 14+
+- Redis 7+
+
+## Configuration
+
+Create a `.env` file based on `.env.example`:
+
+```env
+# Database
+DATABASE_URL=postgresql://user:password@localhost:5432/firela
+
+# Redis
+REDIS_URL=redis://localhost:6379
+
+# Security
+SECRET_KEY=your-secret-key
+
+# Optional: Beancount path
+BEANCOUNT_FILE=/path/to/your/ledger.beancount
+```
+
+## Verify Installation
+
+Visit `http://localhost:3000/health` to verify the installation.
+
+<Note>
+Need help? Open an issue on [GitHub](https://github.com/fire-la/firela/issues).
+</Note>
