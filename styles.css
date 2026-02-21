@@ -9,13 +9,31 @@ body {
   background-color: #fafafa !important;
 }
 
-/* Headings - lighter gray */
-h1, h2, h3, h4, h5, h6 {
+/* Headings - lighter gray, smaller, more spacing */
+h1, h2, h3, h4, h5, h6, [class*="heading"], [class*="Heading"] {
   color: #666 !important;
+  font-weight: 500 !important;
+}
+
+h1 {
+  font-size: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+h2 {
+  font-size: 1.25rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+}
+
+h3 {
+  font-size: 1rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
 }
 
 /* Hide "Powered by Mintlify" */
-[class*="powered"], [class*="Powered"], [class*="mintlify"], a[href*="mintlify"] {
+[class*="powered"], [class*="Powered"], a[href*="mintlify"] {
   display: none !important;
 }
 
