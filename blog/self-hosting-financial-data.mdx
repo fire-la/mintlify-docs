@@ -1,0 +1,90 @@
+---
+title: The Case for Self-Hosting Financial Data
+description: Why your financial data should live on your servers, not theirs
+author: FIREla Team
+date: 2025-02-15
+---
+
+# The Case for Self-Hosting Financial Data
+
+Every time you connect a bank account to a financial app, you're making a trade: convenience for control.
+
+We think that's a bad deal.
+
+## The Data Economy
+
+Financial apps are often free for a reason: your data is the product.
+
+<Warning>
+Your financial data reveals your income, spending habits, relationships, health conditions, political donations, and more.
+</Warning>
+
+This data is valuable. Companies use it to:
+
+- Build credit profiles
+- Target advertisements
+- Train machine learning models
+- Sell to data brokers
+
+## The Self-Hosting Alternative
+
+Self-hosting means running software on infrastructure you control:
+
+```
+┌─────────────────────────────────────┐
+│           Your Server               │
+│  ┌─────────────────────────────┐   │
+│  │      FIREla Instance        │   │
+│  │  ┌─────────────────────┐    │   │
+│  │  │   Your Financial    │    │   │
+│  │  │       Data          │    │   │
+│  │  └─────────────────────┘    │   │
+│  └─────────────────────────────┘   │
+└─────────────────────────────────────┘
+         You control this
+```
+
+Benefits:
+
+- **Privacy** - No third-party access
+- **Ownership** - Your data, your rules
+- **Permanence** - No company can deprecate your data
+- **Customization** - Modify the software to fit your needs
+
+## Common Concerns
+
+### "Isn't self-hosting complicated?"
+
+It used to be. FIREla runs in Docker:
+
+```bash
+docker-compose up -d
+```
+
+That's it. No DevOps degree required.
+
+### "What about security?"
+
+Paradoxically, self-hosting can be *more* secure:
+
+- **Attack surface** - Your server isn't a high-value target like a SaaS with millions of users
+- **Transparency** - You can audit every line of code
+- **Control** - You decide who has access
+
+### "What if I'm not technical?"
+
+We're building managed hosting options. But the self-hosted option will always exist for those who want it.
+
+## The Bigger Picture
+
+We believe in a future where:
+
+- Individuals own their data
+- Software is transparent and auditable
+- Vendor lock-in is a choice, not a trap
+
+FIREla is a small step toward that future.
+
+<Button href="/quickstart" variant="primary">
+  Get Started with FIREla
+</Button>
