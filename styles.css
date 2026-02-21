@@ -1,0 +1,92 @@
+/* FIREla Custom Styles - Match Landing Page */
+
+:root {
+  --primary: #FF7F3F;
+  --background: #fafafa;
+  --text-color: #111;
+  --text-muted: #666;
+  --text-light: #999;
+  --border-color: #e5e5e5;
+}
+
+/* Base styles */
+body {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Fira Mono', 'Droid Sans Mono', 'Source Code Pro', monospace !important;
+  line-height: 1.7 !important;
+  color: var(--text-color) !important;
+  background-color: var(--background) !important;
+}
+
+/* Main content area */
+main, article, .prose {
+  background-color: var(--background) !important;
+}
+
+/* Sidebar and navigation */
+aside, nav, .sidebar {
+  background-color: var(--background) !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color) !important;
+  font-family: inherit !important;
+}
+
+/* Paragraphs and text */
+p, li, span {
+  color: var(--text-muted);
+}
+
+/* Links */
+a {
+  color: var(--primary) !important;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* Code blocks */
+code, pre {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Fira Mono', 'Droid Sans Mono', 'Source Code Pro', monospace !important;
+  background-color: #f5f5f5 !important;
+}
+
+/* Borders and dividers */
+hr, .border {
+  border-color: var(--border-color) !important;
+}
+
+/* Cards */
+.card, [class*="Card"] {
+  background-color: #fff !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Buttons */
+button, .btn, [class*="Button"] {
+  font-family: inherit !important;
+}
+
+/* Navbar */
+header, .navbar, [class*="Navbar"] {
+  background-color: var(--background) !important;
+}
+
+/* Footer */
+footer, [class*="Footer"] {
+  background-color: var(--background) !important;
+  border-top: 1px solid var(--border-color) !important;
+}
+
+/* Highlight/primary color text */
+.highlight, .text-primary, [class*="primary"] {
+  color: var(--primary) !important;
+}
+
+/* Remove default Mintlify background gradients */
+[class*="gradient"], [class*="Gradient"] {
+  background: none !important;
+  background-color: var(--background) !important;
+}
