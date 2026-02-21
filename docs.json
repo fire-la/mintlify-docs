@@ -40,6 +40,14 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Blog",
+        "pages": [
+          "blog/introducing-firela",
+          "blog/why-beancount",
+          "blog/self-hosting-financial-data"
+        ]
       }
     ],
     "global": {
