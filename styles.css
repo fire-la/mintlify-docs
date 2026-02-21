@@ -9,16 +9,16 @@ body {
   background-color: #fafafa !important;
 }
 
+/* Headings - lighter gray */
+h1, h2, h3, h4, h5, h6 {
+  color: #666 !important;
+}
+
 /* Hide "Powered by Mintlify" */
 [class*="powered"], [class*="Powered"], [class*="mintlify"], a[href*="mintlify"] {
   display: none !important;
 }
 
 footer a:last-child, [class*="footer"] a:last-child {
-  display: none !important;
-}
-
-/* Hide Ask AI button */
-[class*="ask"], [class*="Ask"], [class*="ai-button"], [class*="AiButton"], button[aria-label*="Ask"], button[aria-label*="AI"] {
   display: none !important;
 }
