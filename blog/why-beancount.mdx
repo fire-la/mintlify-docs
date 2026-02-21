@@ -1,0 +1,68 @@
+---
+title: Why We Chose Beancount
+description: The case for plain text accounting in FIREla
+author: FIREla Team
+date: 2025-02-20
+---
+
+# Why We Chose Beancount
+
+When building FIREla, we evaluated dozens of accounting formats. We chose [Beancount](http://furius.ca/beancount/). Here's why.
+
+## The Problem with Traditional Finance Apps
+
+Most personal finance tools store your data in proprietary databases:
+
+- **Opaque** - You can't see how your data is structured
+- **Locked** - Export formats are limited or non-existent
+- **Fragile** - One company decision can orphan years of data
+
+## Enter Plain Text Accounting
+
+Plain text accounting stores your financial records in simple text files:
+
+```beancount
+2024-01-15 * "Coffee Shop"
+  Expenses:Dining:Coffee    5.50 USD
+  Assets:Bank:Checking     -5.50 USD
+```
+
+Benefits:
+
+- **Human-readable** - Anyone can understand it
+- **Version-controllable** - Track every change with Git
+- **Portable** - Works with any text editor
+- **Future-proof** - Text files will always be readable
+
+## Why Beancount Specifically
+
+We evaluated Ledger, HLedger, and Beancount. Beancount won because:
+
+| Feature | Beancount | Ledger | HLedger |
+|---------|-----------|--------|---------|
+| Syntax clarity | ✅ Clean | Verbose | Clean |
+| Python ecosystem | ✅ Native | Plugin | Plugin |
+| Error messages | ✅ Helpful | Cryptic | Good |
+| Community | Growing | Large | Medium |
+| Validation | ✅ Strict | Loose | Medium |
+
+## How FIREla Uses Beancount
+
+FIREla doesn't replace Beancount—it enhances it:
+
+1. **Visual editing** - GUI for transaction entry
+2. **Automated imports** - Bank sync, CSV parsing
+3. **Smart categorization** - AI-assisted transaction labeling
+4. **Beautiful reports** - Interactive charts and dashboards
+
+Your underlying `.beancount` files remain pure text, fully under your control.
+
+<Note>
+You can always edit your Beancount files directly in any text editor. FIREla is a layer on top, not a lock-in.
+</Note>
+
+## Learn More
+
+- [Beancount Documentation](http://furius.ca/beancount/doc/index)
+- [Plain Text Accounting](https://plaintextaccounting.org/)
+- [FIREla Beancount Guide](/concepts/beancount)
