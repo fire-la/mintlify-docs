@@ -57,9 +57,9 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Website",
+          "anchor": "firela.io",
           "href": "https://firela.io",
-          "icon": "house"
+          "icon": "link"
         },
         {
           "anchor": "GitHub",
