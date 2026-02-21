@@ -1,0 +1,58 @@
+---
+title: Beancount Basics
+description: Introduction to Beancount syntax for FIREla
+---
+
+# Beancount Basics
+
+FIREla is built on [Beancount](http://furius.ca/beancount/), a plain text double-entry accounting system.
+
+## What is Beancount?
+
+Beancount is a text-based accounting format that:
+
+- Uses plain text files you can edit with any text editor
+- Supports double-entry bookkeeping
+- Is version-control friendly (Git)
+- Is human-readable and auditable
+
+## Basic Syntax
+
+### Account Declaration
+
+```beancount
+1990-01-01 open Assets:Bank:Checking USD
+1990-01-01 open Liabilities:CreditCard USD
+1990-01-01 open Expenses:Food USD
+1990-01-01 open Income:Salary USD
+```
+
+### Transactions
+
+```beancount
+2024-01-15 * "Grocery shopping"
+  Expenses:Food:Groceries    50.00 USD
+  Assets:Bank:Checking      -50.00 USD
+```
+
+### Balance Assertions
+
+```beancount
+2024-01-31 balance Assets:Bank:Checking 1000.00 USD
+```
+
+## Key Concepts
+
+<CardGroup cols={2}>
+  <Card title="Double Entry" icon="scale-balanced">
+    Every transaction has equal debits and credits
+  </Card>
+  <Card title="Plain Text" icon="file-code">
+    Your data is readable, portable, and version-controllable
+  </Card>
+</CardGroup>
+
+## Learn More
+
+- [Official Beancount Documentation](http://furius.ca/beancount/doc/index)
+- [Beancount Cheat Sheet](http://furius.ca/beancount/doc/cheat_sheet)
