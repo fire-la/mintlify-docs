@@ -45,6 +45,11 @@
     "global": {
       "anchors": [
         {
+          "anchor": "Website",
+          "href": "https://firela.io",
+          "icon": "globe"
+        },
+        {
           "anchor": "GitHub",
           "href": "https://github.com/fire-la",
           "icon": "github"
@@ -55,7 +60,7 @@
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg",
-    "href": "https://firela.ai"
+    "href": "https://firela.io"
   },
   "navbar": {
     "links": [
