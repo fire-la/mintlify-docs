@@ -1,0 +1,67 @@
+---
+title: Self-Hosting
+description: Deploy and manage FIREla on your own infrastructure
+---
+
+# Self-Hosting
+
+One of FIREla's core principles is self-hosting. Your financial data stays on your servers.
+
+## Why Self-Host?
+
+- **Data sovereignty** - Your data never leaves your infrastructure
+- **Privacy** - No third-party access to your financial information
+- **Control** - Full control over updates, backups, and configuration
+- **Cost** - No subscription fees, only your infrastructure costs
+
+## Deployment Options
+
+### Docker Compose
+
+The simplest self-hosting option:
+
+```bash
+docker-compose up -d
+```
+
+### Kubernetes
+
+For production deployments, use our Helm chart:
+
+```bash
+helm repo add firela https://fire-la.github.io/charts
+helm install firela firela/firela
+```
+
+### Manual Deployment
+
+See our [installation guide](/installation) for manual setup.
+
+## Data Backup
+
+Your data is stored in:
+
+- **PostgreSQL** - Transaction data and metadata
+- **Beancount files** - Plain text ledger files
+
+### Backup Strategy
+
+```bash
+# Backup PostgreSQL
+pg_dump firela > backup_$(date +%Y%m%d).sql
+
+# Backup Beancount files
+cp -r /data/beancount /backup/beancount_$(date +%Y%m%d)
+```
+
+<Warning>
+Always encrypt your backups. Financial data is sensitive!
+</Warning>
+
+## Security Considerations
+
+- Use HTTPS with valid certificates
+- Enable authentication
+- Regularly update dependencies
+- Restrict network access
+- Enable audit logging
