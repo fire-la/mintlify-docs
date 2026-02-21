@@ -1,33 +1,70 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: API Introduction
+description: Getting started with the FIREla API
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+# API Introduction
 
-## Welcome
+FIREla provides a RESTful API for programmatic access to your financial data.
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+## Base URL
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+```
+https://your-firela-instance.com/api/v1
+```
 
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+All API requests require authentication using Bearer tokens:
+
+```bash
+curl -H "Authorization: Bearer YOUR_TOKEN" \
+  https://your-firela-instance.com/api/v1/accounts
+```
+
+### Getting an API Token
+
+1. Navigate to Settings > API Tokens
+2. Click "Create new token"
+3. Give it a descriptive name
+4. Copy the token (shown only once!)
+
+## Rate Limits
+
+| Plan | Requests/minute |
+|------|----------------|
+| Default | 60 |
+| Self-hosted | Unlimited |
+
+## Response Format
+
+All responses are JSON:
 
 ```json
-"security": [
-  {
-    "bearerAuth": []
+{
+  "data": [...],
+  "meta": {
+    "page": 1,
+    "total": 100
   }
-]
+}
 ```
+
+## Error Handling
+
+Errors follow this format:
+
+```json
+{
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "Account not found"
+  }
+}
+```
+
+## SDKs
+
+<Note>
+Official SDKs are coming soon. For now, use any HTTP client.
+</Note>
