@@ -17,3 +17,8 @@ body {
 footer a:last-child, [class*="footer"] a:last-child {
   display: none !important;
 }
+
+/* Hide Ask AI button */
+[class*="ask"], [class*="Ask"], [class*="ai-button"], [class*="AiButton"], button[aria-label*="Ask"], button[aria-label*="AI"] {
+  display: none !important;
+}
