@@ -48,10 +48,8 @@
         "tab": "API Reference",
         "groups": [
           {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
+            "group": "Endpoints",
+            "openapi": "/api-reference/openapi.json"
           }
         ]
       },
