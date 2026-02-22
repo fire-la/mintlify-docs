@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "FIREla API",
-    "description": "Open source, self-hosted financial data management with Beancount",
+    "description": "Open source, self-hosted financial data management with Beancount.\n\n## Authentication\n\nAll API endpoints require JWT Bearer Token:\n\n```\nAuthorization: Bearer <your-jwt-token>\n```\n\n## Base URL\n\n```\nhttps://api.firela.io\n```",
     "version": "1.0.0",
     "contact": {
       "name": "FIREla Team",
@@ -15,11 +15,7 @@
       "description": "Production server"
     }
   ],
-  "security": [
-    {
-      "bearer": []
-    }
-  ],
+  "security": [{"bearer": []}],
   "components": {
     "securitySchemes": {
       "bearer": {
@@ -29,29 +25,54 @@
       }
     }
   },
+  "tags": [
+    {"name": "Auth", "description": "Authentication endpoints"},
+    {"name": "Accounts", "description": "Account management"},
+    {"name": "Transactions", "description": "Transaction management"},
+    {"name": "Balances", "description": "Balance queries"},
+    {"name": "Commodities", "description": "Currency and asset management"},
+    {"name": "Prices", "description": "Price tracking"},
+    {"name": "Payees", "description": "Payee management"},
+    {"name": "Import", "description": "File import"},
+    {"name": "NLP", "description": "Natural language processing"},
+    {"name": "Health", "description": "System health"}
+  ],
   "paths": {
+    "/api/v1/health": {
+      "get": {
+        "summary": "Health check",
+        "description": "Check API health status",
+        "tags": ["Health"],
+        "security": [],
+        "responses": {
+          "200": {"description": "Service is healthy"}
+        }
+      }
+    },
+    "/api/v1/auth/login": {
+      "post": {
+        "summary": "Login",
+        "description": "Authenticate user and get JWT token",
+        "tags": ["Auth"],
+        "security": [],
+        "responses": {
+          "200": {"description": "Login successful"},
+          "401": {"description": "Invalid credentials"}
+        }
+      }
+    },
     "/api/v1/bean/accounts": {
       "get": {
         "summary": "List accounts",
         "description": "Returns all accounts with optional filtering",
         "tags": ["Accounts"],
-        "security": [{"bearer": []}],
-        "responses": {
-          "200": {
-            "description": "Accounts retrieved successfully"
-          }
-        }
+        "responses": {"200": {"description": "Accounts retrieved"}}
       },
       "post": {
-        "summary": "Create a new account",
-        "description": "Creates a new account (Beancount Open directive)",
+        "summary": "Create account",
+        "description": "Creates a new Beancount account",
         "tags": ["Accounts"],
-        "security": [{"bearer": []}],
-        "responses": {
-          "201": {
-            "description": "Account created successfully"
-          }
-        }
+        "responses": {"201": {"description": "Account created"}}
       }
     },
     "/api/v1/bean/transactions": {
@@ -59,28 +80,80 @@
         "summary": "List transactions",
         "description": "Returns all transactions with optional filtering",
         "tags": ["Transactions"],
-        "security": [{"bearer": []}],
-        "responses": {
-          "200": {
-            "description": "Transactions retrieved successfully"
-          }
-        }
+        "responses": {"200": {"description": "Transactions retrieved"}}
       },
       "post": {
-        "summary": "Create a new transaction",
+        "summary": "Create transaction",
         "description": "Creates a new double-entry transaction",
         "tags": ["Transactions"],
-        "security": [{"bearer": []}],
-        "responses": {
-          "201": {
-            "description": "Transaction created successfully"
-          }
-        }
+        "responses": {"201": {"description": "Transaction created"}}
+      }
+    },
+    "/api/v1/bean/balances": {
+      "get": {
+        "summary": "Get balances",
+        "description": "Query account balances",
+        "tags": ["Balances"],
+        "responses": {"200": {"description": "Balances retrieved"}}
+      }
+    },
+    "/api/v1/bean/commodities": {
+      "get": {
+        "summary": "List commodities",
+        "description": "Returns all commodities (currencies, assets)",
+        "tags": ["Commodities"],
+        "responses": {"200": {"description": "Commodities retrieved"}}
+      },
+      "post": {
+        "summary": "Create commodity",
+        "description": "Creates a new commodity",
+        "tags": ["Commodities"],
+        "responses": {"201": {"description": "Commodity created"}}
+      }
+    },
+    "/api/v1/bean/prices": {
+      "get": {
+        "summary": "List prices",
+        "description": "Returns price history for commodities",
+        "tags": ["Prices"],
+        "responses": {"200": {"description": "Prices retrieved"}}
+      },
+      "post": {
+        "summary": "Record price",
+        "description": "Records a new price point",
+        "tags": ["Prices"],
+        "responses": {"201": {"description": "Price recorded"}}
+      }
+    },
+    "/api/v1/bean/payees": {
+      "get": {
+        "summary": "List payees",
+        "description": "Returns all payees (counterparties)",
+        "tags": ["Payees"],
+        "responses": {"200": {"description": "Payees retrieved"}}
+      },
+      "post": {
+        "summary": "Create payee",
+        "description": "Creates a new payee",
+        "tags": ["Payees"],
+        "responses": {"201": {"description": "Payee created"}}
+      }
+    },
+    "/api/v1/bean/import/files": {
+      "post": {
+        "summary": "Import file",
+        "description": "Import transactions from CSV, PDF, or OFX file",
+        "tags": ["Import"],
+        "responses": {"201": {"description": "File imported"}}
+      }
+    },
+    "/api/v1/bean/nlp/parse": {
+      "post": {
+        "summary": "Parse natural language",
+        "description": "Parse natural language transaction input (Chinese)",
+        "tags": ["NLP"],
+        "responses": {"200": {"description": "Parsed successfully"}}
       }
     }
-  },
-  "tags": [
-    {"name": "Accounts", "description": "Account management"},
-    {"name": "Transactions", "description": "Transaction management"}
-  ]
+  }
 }
